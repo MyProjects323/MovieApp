@@ -12,6 +12,10 @@ app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
+app.get("/",(req,res)=>{
+  res.redirect("/search")
+})
+
 app.get("/results", (req, res) => {
   let query = req.query.search;
 
